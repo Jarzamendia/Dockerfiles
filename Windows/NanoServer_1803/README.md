@@ -7,6 +7,7 @@ Nesta versão adicionei os certificados disponiveis na ITI.gov.br, para melhor d
 Para isto, utilizei o aplicativo "certoc.exe", disponivel na SDK de desenvilvimento do Windows 10 e um script powershell
 para dividir o arquivo p7b em arquivos cer.
 
-Modo de usar:
 
-execute o script powershell build.ps1, ele irá criar uma Dockerfile e executar a build da imagem.
+# Modo de usar:
+
+execute o script build.ps1. Ele irá criar uma Dockerfile e executar a build da imagem. A imagem criada será: nanoserver_base:1803.
