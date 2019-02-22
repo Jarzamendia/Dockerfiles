@@ -15,6 +15,7 @@ RUN apk update && \
             g++ \
             cyrus-sasl-dev \
             libgsasl-dev \
+            libzip-dev \
             make \
             ca-certificates \
             tzdata \
@@ -41,6 +42,8 @@ RUN pecl channel-update pecl.php.net \
     && docker-php-ext-enable memcached \
     && docker-php-ext-enable imagick \
     && docker-php-ext-enable mcrypt
+
+RUN pecl install zip
 
 #Vamos copiar os arquivos de configuração do Laravel.
 COPY ./custom.ini /usr/local/etc/php/conf.d
